@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WanderWise helps you discover beaches, temples, and unforgettable destinations around the world.">
+  <title>WanderWise | Travel Recommendations</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="home">
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html" aria-label="WanderWise home"><span class="brand-symbol">✦</span>Wander<span>Wise</span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="active" aria-current="page" href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+      <form class="nav-search" id="siteSearch" role="search">
+        <label class="sr-only" for="searchInput">Search destinations, beaches, temples, or countries</label>
+        <input type="search" id="searchInput" name="q" placeholder="Beach, temple, Japan..." autocomplete="off" required>
+        <button class="search-button" type="submit">Search</button>
+        <button class="clear-button" type="button" id="clearSearch" aria-label="Clear search">Clear</button>
+      </form>
+    </div>
+  </header>
+  <main>
+    <section class="hero shell" aria-labelledby="heroTitle">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span>EXPLORE MORE. REMEMBER FOREVER.</p>
+        <h1 id="heroTitle">Your next great story <em>starts here.</em></h1>
+        <p class="hero-description">Uncover coastlines, extraordinary temples, and unforgettable cities. Search a destination, get inspired, and make your next adventure your own.</p>
+        <div class="hero-actions">
+          <button class="primary-button" data-search="beach" type="button">Explore beaches <span aria-hidden="true">↗</span></button>
+          <button class="secondary-button" data-search="Japan" type="button">Discover Japan <span aria-hidden="true">→</span></button>
+        </div>
+        <div class="hero-footnote"><span class="dot-cluster"><i></i><i></i><i></i></span> Curated inspiration for curious travelers</div>
+      </div>
+      <div class="hero-visual">
+        <img class="hero-image" src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=1200&amp;fit=crop&amp;auto=format&amp;q=85" data-fallback="assets/indonesia-1.svg" onerror="this.onerror=null;this.src=this.dataset.fallback" alt="Bali rice terraces and lush tropical scenery" fetchpriority="high">
+        <div class="destination-sticker"><span class="mini-star">✦</span><div><strong>Bali, Indonesia</strong><small>Dream. Explore. Discover.</small></div></div>
+        <div class="floating-caption">01 / 03 <span></span> CURATED PLACES</div>
+      </div>
+    </section>
+    <section class="explore-section" aria-labelledby="exploreTitle">
+      <div class="shell">
+        <div class="section-heading"><div><p class="eyebrow">CHOOSE YOUR ADVENTURE</p><h2 id="exploreTitle">Where would you like to go?</h2></div><p>Pick a category or use the search bar above to find curated recommendations.</p></div>
+        <div class="category-grid">
+          <button type="button" class="category-card" data-search="beach"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=740&amp;fit=crop&amp;auto=format&amp;q=78" data-fallback="assets/beach-1.svg" onerror="this.onerror=null;this.src=this.dataset.fallback" alt="Turquoise tropical beach"><span class="category-overlay"><span>01 / SUN & SEA</span><strong>Beaches</strong><span class="category-arrow">↗</span></span></button>
+          <button type="button" class="category-card" data-search="temple"><img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=740&amp;fit=crop&amp;auto=format&amp;q=78" data-fallback="assets/temple-1.svg" onerror="this.onerror=null;this.src=this.dataset.fallback" alt="Traditional Japanese temple in Kyoto"><span class="category-overlay"><span>02 / HISTORY & CULTURE</span><strong>Temples</strong><span class="category-arrow">↗</span></span></button>
+          <button type="button" class="category-card" data-search="Japan"><img src="https://images.unsplash.com/photo-1480796927426-f609979314bd?w=740&amp;fit=crop&amp;auto=format&amp;q=78" data-fallback="assets/japan-1.svg" onerror="this.onerror=null;this.src=this.dataset.fallback" alt="Japanese town streets"><span class="category-overlay"><span>03 / CITY & COUNTRY</span><strong>Countries</strong><span class="category-arrow">↗</span></span></button>
+        </div>
+      </div>
+    </section>
+    <section class="results-section shell" id="recommendations" aria-labelledby="resultsTitle" hidden>
+      <div class="section-heading results-heading"><div><p class="eyebrow">YOUR PERSONAL SHORTLIST</p><h2 id="resultsTitle">Recommended for you</h2></div><span class="results-count" id="resultsCount"></span></div>
+      <p class="results-note" id="resultsNote" role="status" aria-live="polite"></p>
+      <div class="recommendation-grid" id="recommendationGrid"></div>
+    </section>
+    <section class="value-section shell" aria-labelledby="valueTitle"><div class="value-heading"><p class="eyebrow">WHY WANDERWISE</p><h2 id="valueTitle">Less searching.<br><em>More discovering.</em></h2></div><div class="value-grid"><div><span>01</span><h3>Handpicked places</h3><p>Inspiring coastlines, landmarks, and local favorites collected into simple guides.</p></div><div><span>02</span><h3>Find your style</h3><p>Search beaches, temples, or a country and see recommendations that fit.</p></div><div><span>03</span><h3>Dream beyond borders</h3><p>Use every destination as a starting point for your own great travel story.</p></div></div></section>
+    <section class="cta-section"><div class="shell cta-inner"><div><p class="eyebrow">READY WHEN YOU ARE</p><h2>Every great trip begins<br>with a little curiosity.</h2></div><a class="primary-button" href="about.html">Get to know us <span aria-hidden="true">↗</span></a></div></section>
+  </main>
+  <footer class="site-footer"><div class="shell footer-inner"><a class="brand" href="index.html"><span class="brand-symbol">✦</span>Wander<span>Wise</span></a><p>Made for the journey, not just the destination. © <span id="year">2026</span> WanderWise.</p><div><a href="about.html">About Us</a><a href="contact.html">Contact Us</a></div></div></footer>
+</body>
+</html>
